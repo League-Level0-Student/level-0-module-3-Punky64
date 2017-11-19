@@ -7,13 +7,17 @@ package loops;
 import org.jointheleague.graphical.robot.Robot;
 
 public class WalkOfFame {
+	static Robot rob = new Robot();
 	public static void main(String[] args) {
-		Robot rob = new Robot();
-		// 1. Set the X position of the robot so that it starts on the left. 
+		
+		// 1. Set the X position of the robot so that it starts on the left.
+		rob.setAngle(-90);
 		// You also need to show the robot to see the result of this line.
 
 		// 2. Make the robot draw a star shape. Hint: 144.
-
+         rob.setSpeed(10);
+     	rob.penDown();
+		star(5);
 		// 3. Set the size of the star to 30.
 
 		/** THE CHALLENGE: **/
@@ -25,5 +29,11 @@ public class WalkOfFame {
 		 */
 
 	}
-
+	
+	static void star(int num) {
+		for (int i = 0; i < num ; i++) {
+	 
+    rob.move(100);
+    rob.setAngle(144);}
+	}
 }
